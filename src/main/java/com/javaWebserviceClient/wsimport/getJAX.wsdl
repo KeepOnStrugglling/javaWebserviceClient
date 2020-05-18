@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="impl.server.webservice.javatest.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://server.webservice.javatest.com/" name="JAXTestServiceImplService" targetNamespace="impl.server.webservice.javatest.com">
+  <wsdl:import location="http://localhost:9010/javatest/webservice/getJAX?wsdl=JAXTestService.wsdl" namespace="http://server.webservice.javatest.com/">
+    </wsdl:import>
+  <wsdl:binding name="JAXTestServiceImplServiceSoapBinding" type="ns1:JAXTestService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getStudentScoreById">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getStudentScoreById">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getStudentScoreByIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="JAXTestServiceImplService">
+    <wsdl:port binding="tns:JAXTestServiceImplServiceSoapBinding" name="JAXTestServiceImplPort">
+      <soap:address location="http://localhost:9010/javatest/webservice/getJAX"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
