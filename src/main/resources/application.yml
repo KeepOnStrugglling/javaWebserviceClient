@@ -1,0 +1,11 @@
+server:
+  port: 9020
+  servlet:
+    context-path: /webserviceClient
+logging:
+  level:
+    com.javatest: debug
+endpoints:
+  actuator:
+    enabled: true
+    sensitive: false
