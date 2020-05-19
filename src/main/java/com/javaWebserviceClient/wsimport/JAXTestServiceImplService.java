@@ -17,14 +17,15 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "JAXTestServiceImplService", targetNamespace = "impl.server.webservice.javatest.com", wsdlLocation = "http://localhost:9010/javatest/webservice/getJAX?wsdl")
+@WebServiceClient(name = "JAXTestServiceImplService", targetNamespace = "http://impl.server.webservice.javatest.com/", wsdlLocation = "http://localhost:9010/javatest/webservice/getJAX?wsdl")
+//@org.springframework.stereotype.Service
 public class JAXTestServiceImplService
     extends Service
 {
 
     private final static URL JAXTESTSERVICEIMPLSERVICE_WSDL_LOCATION;
     private final static WebServiceException JAXTESTSERVICEIMPLSERVICE_EXCEPTION;
-    private final static QName JAXTESTSERVICEIMPLSERVICE_QNAME = new QName("impl.server.webservice.javatest.com", "JAXTestServiceImplService");
+    private final static QName JAXTESTSERVICEIMPLSERVICE_QNAME = new QName("http://impl.server.webservice.javatest.com/", "JAXTestServiceImplService");
 
     static {
         URL url = null;
@@ -69,7 +70,7 @@ public class JAXTestServiceImplService
      */
     @WebEndpoint(name = "JAXTestServiceImplPort")
     public JAXTestService getJAXTestServiceImplPort() {
-        return super.getPort(new QName("impl.server.webservice.javatest.com", "JAXTestServiceImplPort"), JAXTestService.class);
+        return super.getPort(new QName("http://impl.server.webservice.javatest.com/", "JAXTestServiceImplPort"), JAXTestService.class);
     }
 
     /**
@@ -81,7 +82,7 @@ public class JAXTestServiceImplService
      */
     @WebEndpoint(name = "JAXTestServiceImplPort")
     public JAXTestService getJAXTestServiceImplPort(WebServiceFeature... features) {
-        return super.getPort(new QName("impl.server.webservice.javatest.com", "JAXTestServiceImplPort"), JAXTestService.class, features);
+        return super.getPort(new QName("http://impl.server.webservice.javatest.com/", "JAXTestServiceImplPort"), JAXTestService.class, features);
     }
 
     private static URL __getWsdlLocation() {
